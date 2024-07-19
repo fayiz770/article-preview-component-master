@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="index.css">
@@ -25,7 +24,7 @@
           to help you make any room feel complete.
         </p>
       </div>
-      <div class="profile">
+      <div class="profile" id="profile">
         <div class="profile-info">
           <img class="avatar" src="images/avatar-michelle.jpg" alt="avatar-michelle">
           <div class="avatar-info">
@@ -33,11 +32,21 @@
             <p class="date">17 JUL 2024</p>
           </div>
         </div>
-        <div class="share-icon">
-          <img class="icon-share" src="images/icon-share.svg" alt="icon-share">
+        <div class="share-icon-container" id="share-icon">
+          <svg class="icon-share" id="icon-share" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path id="path" fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+        </div>
+        <div class="modal" id="modal">
+          <p class="modal-text">SHARE</p>
+          <img src="images/icon-facebook.svg" alt="icon-facebook">
+          <img src="images/icon-twitter.svg" alt="icon-twitter">
+          <img src="images/icon-pinterest.svg" alt="icon-pinterest">
+          <div class="share-icon-container none">
+            <svg id="share-icon-mobile" xmlns="http://www.w3.org/2000/svg" width="15" height="13"><path class="share-icon-mobile" fill="#6E8098" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          </div>
         </div>
       </div>
     </article>
   </main>
+  <script src="index.js"></script>
 </body>
 </html>

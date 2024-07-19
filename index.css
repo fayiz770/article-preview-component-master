@@ -45,6 +45,7 @@ body {
 }
 
 .profile {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,7 +63,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 1em;
 }
 
 .title {
@@ -80,7 +81,7 @@ body {
     color: var(--very-dark-grayish-blue);
 }
 
-.share-icon {
+.share-icon-container {
     width: 3em;
     height: 3em;
     padding: 1em;
@@ -91,20 +92,88 @@ body {
     justify-content: center;
 }
 
+.icon-share-modal {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    background: white;
+}
+
+.share-icon-mobile {
+    fill: white;
+}
+
+.none {
+    background: var(--desaturated-dark-blue);
+}
+
+
+.modal > img {
+    cursor: pointer;
+}
+
+.modal-text {
+    cursor: pointer;
+    font-weight: lighter;
+    letter-spacing: 0.3em;
+    color: var(--grayish-blue);
+}
+
+.modal {
+    position: absolute;
+    background: var(--very-dark-grayish-blue);
+    border-radius: 0 0 1em 1em;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 @media (min-width: 768px){
     .main {
-        width: 70%;
+        max-width: 50vw;
         display: flex;
         flex-direction: row;
     }
 
+    .modal {
+        padding: 1em;
+        gap: 1em;
+        border-radius: 0.5em;
+        width: fit-content;
+        top: -4em;
+        right: -3em;
+        bottom: auto;
+        left: auto;
+    }
+
+    .none {
+        display: none;
+    }
+
     .image {
         border-radius: 1em 0 0 1em;
-        width: 50%;
-        height: 100%;
+        min-width: 40%;
+        min-height: 100%;
     }
 
     .article {
-        padding: 1em 2em;
+        padding: 1em 1em;
     }
-}
+
+    .share-icon-container:hover {
+        background-color: var(--desaturated-dark-blue);
+    }
+
+    .share-icon-container:hover #path,
+    .modal:hover #path {
+        fill: white;
+    }
+}  
